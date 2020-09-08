@@ -34,9 +34,9 @@ spring:
     lettuce:
       pool:
         max-active: 1024
-        max-wait: 1000
-
-
+        max-wait: 10000ms
+        max-idle: 200
+        min-idle: 5
 
 # Mybatis-plus配置
 mybatis-plus:
@@ -52,7 +52,6 @@ mybatis-plus:
 logging:
   level:
     com.xxxx.server.mapper: debug
-
 jwt:
   # JWT存储的请求头
   tokenHeader: Authorization
@@ -62,5 +61,3 @@ jwt:
   expiration: 604800
   # JWT 负载中拿到开头
   tokenHead: Bearer
-
-# Redis配置
