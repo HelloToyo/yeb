@@ -34,6 +34,7 @@ spring:
     lettuce:
       pool:
         max-active: 1024
+        max-wait: 1000
 
 
 
